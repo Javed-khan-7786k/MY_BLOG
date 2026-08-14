@@ -161,6 +161,9 @@ npm install
 # Create .env file from .env.example
 cp .env.example .env
 
+# (Optional) Seed the database with sample articles and comments
+npm run seed
+
 # Start backend development server
 npm run dev
 ```
@@ -196,6 +199,7 @@ The Vite dev server will start on `http://localhost:5173`. Open your browser and
 | Script | Command | Description |
 | :--- | :--- | :--- |
 | `npm run dev` | `npx nodemon --exec npx babel-node src/server.js` | Runs backend in watch mode |
+| `npm run seed` | `npx babel-node src/seed.js` | Seeds MongoDB database with initial sample data |
 | `npm run build` | `npx babel src -d dist` | Transpiles backend source code to ES5/CommonJS |
 | `npm start` | `node dist/server.js` | Starts production server from `dist/` |
 
