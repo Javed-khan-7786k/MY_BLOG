@@ -26,6 +26,19 @@ const Article = () => {
       setIsLoading(true);
       setError(null);
       const result = await fetch(`${API_BASE_URL}/api/blogs`);
+
+      
+      const response = await fetch(API_URL);
+
+    console.log("Status:", response.status);
+    console.log("Content-Type:", response.headers.get("content-type"));
+
+  const text = await response.text();
+
+  console.log("Raw API Response:", text);
+
+
+      
       if (!result.ok) {
         throw new Error('Failed to fetch articles from server');
       }
