@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx nodemon --exec npx babel-node src/server.js",
-    "build": "npx babel src -d dist",
-    "start": "node dist/server.js",
-    "seed": "npx babel-node src/seed.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "dev": "nodemon --exec babel-node src/server.js",
+  "build": "babel src --out-dir dist",
+  "start": "node dist/server.js",
+  "seed": "babel-node src/seed.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
