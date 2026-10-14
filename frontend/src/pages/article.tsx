@@ -26,10 +26,9 @@ const Article = () => {
       setIsLoading(true);
       setError(null);
       const result = await fetch(`${API_BASE_URL}/api/blogs`);
-      // if (!result.ok) {
-      //   console.log(result);
-      //   throw new Error('Failed to fetch articles from server');
-      // }
+      if (!result.ok) {
+        throw new Error('Failed to fetch articles from server');
+      }
       const body = await result.json();
       setArticles(body);
     } catch (err: any) {
