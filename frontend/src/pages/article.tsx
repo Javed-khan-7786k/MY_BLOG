@@ -27,13 +27,11 @@ const Article = () => {
       setError(null);
       const result = await fetch(`${API_BASE_URL}/api/blogs`);
 
-      
-      const response = await fetch(API_URL);
 
-    console.log("Status:", response.status);
-    console.log("Content-Type:", response.headers.get("content-type"));
+    console.log("Status:", result.status);
+    console.log("Content-Type:", result.headers.get("content-type"));
 
-  const text = await response.text();
+  const text = await result.text();
 
   console.log("Raw API Response:", text);
 
